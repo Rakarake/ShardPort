@@ -27,9 +27,9 @@
       in
       rec {
         defaultPackage = pkgs.stdenv.mkDerivation {                                                                     
-          name = "Shard";                                                                          
+          name = "ShardWrapper";                                                                          
           src = ./.;
-          buildInputs = [ shardDotnetPackage pkgs.makeWrapper ];
+          buildInputs = [ shardDotnetPackage ];
           installPhase = ''
             # Copy the necessary text files to build directory
             mkdir -p $out/bin                                                                             
@@ -38,6 +38,10 @@
             cp -r $src/Assets $out/bin
             # Add the actual game to the ouptut path
             cp ${shardDotnetPackage}/bin/Shard $out/bin
+            # When the program runs, it's actually this script that puts
+            # us in the right working directory
+            echo "cd $out/bin ; ./Shard" > $out/bin/ShardWrapper
+            chmod +x $out/bin/ShardWrapper
           '';
         };
 

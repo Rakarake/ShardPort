@@ -7,5 +7,10 @@ The structure of the project has been changed:
   directory).
 * Added 'flake.nix' and 'flake.lock', these make it trivial to run and
   get a development environment (an environment with SDL2 and dotnet8)
-  if you have nix on your computer.
+  if you have nix on your computer. The lockfile locks the versions
+  of dotnet and SDL2, which makes it somewhat future-proof.
+* With the addition of a new section in Shard.csproj, packages.lock.json
+  has been generated, which locks the nuget dependencies; when you
+  run the project form another computer, you will get the exact same
+  versions of the dependences.
 
