@@ -9,6 +9,8 @@ The structure of the project has been changed:
   get a development environment (an environment with SDL2 and dotnet8)
   if you have nix on your computer. The lockfile locks the versions
   of dotnet and SDL2, which makes it somewhat future-proof.
+  COOL THING, you can run `nix run github:Rakarake/ShardPort`
+  on any computer running nix to instantly run the default game.
 * With the addition of a new section in Shard.csproj, packages.lock.json
   has been generated, which locks the nuget dependencies; when you
   run the project form another computer, you will get the exact same
