@@ -29,6 +29,7 @@
         defaultPackage = pkgs.stdenv.mkDerivation {                                                                     
           name = "Shard";                                                                          
           src = ./.;
+          buildInputs = [ shardDotnetPackage pkgs.makeWrapper ];
           installPhase = ''
             # Copy the necessary text files to build directory
             mkdir -p $out/bin                                                                             

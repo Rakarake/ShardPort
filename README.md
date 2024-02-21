@@ -28,6 +28,8 @@ to run, `nix develop` to enter an environment with the dependencies installed.
 `nix build` produces 'result', 'result/bin' contains all Shard and all
 resource files and can be distributed. Note that your working directory must
 be the same as these files.
+Note that it is not optimal to use `nix run` for development, as it builds
+a clean project.
 
 # Adding more asset folders
 If you want more folders in 'Assets', you need to specify those in
