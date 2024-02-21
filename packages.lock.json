@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "dependencies": {
+    "net8.0-windows7.0": {
+      "Sayers.SDL2.Core": {
+        "type": "Direct",
+        "requested": "[1.0.11, )",
+        "resolved": "1.0.11",
+        "contentHash": "K/guGaUyRdMhL2FLlUYbqJmKF3h2KtOV7l90NJfLOt/M64zLb4fkWlDGjXCZdHSZGPKsyOjps6FdsambXiLJQQ=="
+      },
+      "SDL2-CS": {
+        "type": "Direct",
+        "requested": "[2.0.0, )",
+        "resolved": "2.0.0",
+        "contentHash": "W7T4y+lMs7Wm/94dGggRxJYqxX5N6uuxuxw5ob/H34fnaoUwgoG0s+P7xzqsGXUc1cbCAjnShs21FdeFUnPlHA=="
+      }
+    }
+  }
+}
